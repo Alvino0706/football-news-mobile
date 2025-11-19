@@ -45,7 +45,7 @@ class _NewsEntryListPageState extends State<NewsEntryListPage> {
       body: FutureBuilder(
         future: fetchNews(request),
         builder: (context, AsyncSnapshot snapshot) {
-          if (snapshot.data == null) {
+          if (snapshot.data == null) {  
             return const Center(child: CircularProgressIndicator());
           } else {
             if (!snapshot.hasData) {
